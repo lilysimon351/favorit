@@ -1,0 +1,129 @@
+/* header */
+.header {
+  padding-top: 100px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.header__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  position: fixed;
+}
+
+.logo-wr {
+  display: block;
+  font-size: 0;
+  width: 165px;
+}
+
+.call-box {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 100;
+}
+.call-box p {
+  line-height: 20px;
+}
+
+.phone {
+  position: relative;
+  font-size: 20px;
+  color: #d7ae5e;
+  font-weight: 400;
+}
+.phone::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../pics/icons/phone.png) center no-repeat;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* section 1 */
+.intro {
+  background: url(../pics/s1/main-bg.jpg) top center no-repeat;
+  background-size: 100%;
+  padding: 270px 0 175px;
+  color: #ffffff;
+}
+.intro__left {
+  max-width: 490px;
+  position: relative;
+}
+.intro__form {
+  margin: 50px 0 100px;
+}
+
+h1 {
+  color: #d7ae5e;
+  font-weight: bold;
+}
+h1 .bigger {
+  font-size: 68px;
+}
+
+.leaders {
+  width: 590px;
+  position: absolute;
+  bottom: -100px;
+  left: calc(100% + 30px);
+}
+
+.how {
+  background: #0e0e0e;
+  border-radius: 10px;
+  padding: 45px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.how__item {
+  width: calc(100% / 5);
+  margin: 15px 0;
+  padding: 0 15px;
+}
+.how__item .gold {
+  font-weight: 500;
+}
+.how-card {
+  padding-top: 105px;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.how-card:nth-child(1) {
+  background-image: url(../pics/icons/b2i_1.png);
+}
+.how-card:nth-child(2) {
+  background-image: url(../pics/icons/b2i_2.png);
+}
+.how-card:nth-child(3) {
+  background-image: url(../pics/icons/b2i_3.png);
+}
+.how-card:nth-child(4) {
+  background-image: url(../pics/icons/b2i_4.png);
+}
+.how-card:nth-child(5) {
+  background-image: url(../pics/icons/b2i_5.png);
+}
+.how-card::before {
+  content: url(../pics/s1/vertical-line.png);
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.how-card:last-child::before {
+  content: none;
+}/*# sourceMappingURL=app.css.map */

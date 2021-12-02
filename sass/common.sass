@@ -1,0 +1,112 @@
+@import 'variables'
+*
+    box-sizing: border-box
+    transition: 0.3s
+body
+    font-family: 'HelveticaNeueCyr', Arial, sans-serif
+    line-height: normal
+    font-weight: 400
+h1
+    font-size: 48px
+h2
+    font-size: 30px
+h3
+    font-size: 20px
+a
+    text-decoration: none
+    color: $gold
+    outline: none
+p
+    margin: 0
+img
+    width: 100%
+ul,ol
+    padding: 0
+    list-style: none
+input
+    width: 100%
+    height: 60px
+    border: 1px solid $gold
+    color: $gold
+    font-weight: 100
+    font-size: 14px
+    padding: 20px 50px
+    margin: 0
+    background: none
+::placeholder
+    color: inherit
+.input-wr:first-child input
+    border-radius: 5px 5px 0 0
+.input-wr:last-child input
+    border-radius:  0 0 5px 5px
+.form
+    border: 1px solid $gold
+    border-radius: 10px
+    background: rgba(0, 0, 0, 0.349)
+    padding: 30px 45px
+    &__title
+        font-size: 20px
+        color: $white
+        text-align: center
+        span
+            text-transform: uppercase
+    &__politics
+        margin-top: 15px
+.politics        
+    font-size: 10px
+    color: $white
+    text-align: center
+    a
+        text-decoration: underline
+        color: $gold
+.inputs-box
+    margin: 30px 0
+
+[type=button]:not(:disabled), 
+[type=reset]:not(:disabled), 
+[type=submit]:not(:disabled), 
+button:not(:disabled),
+.btn:not(:disabled)
+    display: block
+    background-image: $gradient
+    box-shadow: $btn-shadow
+    border: none
+    border-radius: 8px/35px
+    width: 362px
+    height: 68px
+    font-size: 14px
+    font-weight: 100
+    color: $white
+    text-transform: uppercase
+    text-align: center
+    padding: 15px 5px
+    cursor: pointer
+    outline: none
+    margin-left: auto
+    margin-right: auto
+.btn_empty:not(:disabled)
+    background: none
+    box-shadow: none
+    border: 1px solid $gold
+    width: 196px
+    height: 40px
+    padding: 0 5px
+    color: $gold
+    text-transform: initial
+
+.container
+    max-width: 1170px
+    padding-left: 15px
+    padding-right: 15px
+    margin: 0 auto
+
+.title_white
+    color: $white
+.title_black
+    color: $black
+.gold
+    color: $gold
+.flex
+    display: flex
+.flex-wrap
+    flex-wrap: wrap

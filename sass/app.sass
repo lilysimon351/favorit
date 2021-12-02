@@ -1,0 +1,99 @@
+@import 'variables'
+/* header */
+.header
+    padding-top: 100px
+    position: absolute
+    width: 100%
+    top: 0
+    left: 0
+    &__bottom
+        display: flex
+        justify-content: space-between
+.nav
+    position: fixed
+.logo-wr
+    display: block
+    font-size: 0
+    width: 165px
+.call-box
+    color: $white
+    font-size: 12px
+    font-weight: 100
+    p
+        line-height: 20px
+.phone
+    position: relative
+    font-size: 20px
+    color: $gold
+    font-weight: 400
+    &::before
+        content: ""
+        width: 20px
+        height: 20px
+        background: url(../pics/icons/phone.png) center no-repeat
+        background-size: cover
+        display: inline-block
+        vertical-align: middle
+        margin-right: 5px  
+
+/* section 1 */
+.intro 
+    background: url(../pics/s1/main-bg.jpg) top center no-repeat
+    background-size: 100%
+    padding: 270px 0 175px
+    color: $white
+    &__left
+        max-width: 490px
+        position: relative
+    &__form
+        margin: 50px 0 100px 
+h1
+    color: $gold
+    font-weight: bold
+    .bigger
+        font-size: 68px
+.leaders
+    width: 590px
+    position: absolute
+    bottom: -100px
+    left: calc(100% + 30px)
+.how
+    background: $black
+    border-radius: 10px
+    padding: 45px 0
+    display: flex
+    justify-content: space-between
+    &__item
+        width: calc(100% / 5)
+        margin: 15px 0
+        padding: 0 15px
+        .gold
+            font-weight: 500
+    &-card
+        padding-top: 105px
+        color: $white
+        font-size: 14px
+        text-align: center
+        position: relative
+        &:nth-child(1)
+            background-image: url(../pics/icons/b2i_1.png)
+        &:nth-child(2)
+            background-image: url(../pics/icons/b2i_2.png)
+        &:nth-child(3)
+            background-image: url(../pics/icons/b2i_3.png)
+        &:nth-child(4)
+            background-image: url(../pics/icons/b2i_4.png)
+        &:nth-child(5)
+            background-image: url(../pics/icons/b2i_5.png)
+        background-position: center top
+        background-repeat: no-repeat
+        background-size: auto
+        &::before
+            content: url(../pics/s1/vertical-line.png)
+            position: absolute
+            right: -20px
+            top: 50%
+            transform: translateY(-50%)
+        &:last-child::before
+            content: none
+            
