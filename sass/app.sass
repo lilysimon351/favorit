@@ -9,6 +9,7 @@
     &__bottom
         display: flex
         justify-content: space-between
+        flex-wrap: wrap 
 .nav
     position: fixed
 .logo-wr
@@ -38,8 +39,7 @@
 
 /* section 1 */
 .intro 
-    background: url(../pics/s1/main-bg.jpg) top center no-repeat
-    background-size: 100%
+    background: rgba($black, 0.5 ) url(../pics/s1/main-bg.jpg) top center/cover no-repeat
     padding: 270px 0 175px
     color: $white
     &__left
@@ -50,27 +50,46 @@
 h1
     color: $gold
     font-weight: bold
+    margin: 0.5rem 0
     .bigger
         font-size: 68px
+.site-descr
+    margin: 0
+    margin-bottom: 0.5rem
+    text-align: left
+    text-transform: none
 .leaders
     width: 590px
     position: absolute
     bottom: -100px
     left: calc(100% + 30px)
+/* how */
 .how
     background: $black
     border-radius: 10px
-    padding: 45px 0
     display: flex
     justify-content: space-between
+    position: relative
+    z-index: 1
+    &::before   
+        content: ""
+        position: absolute
+        width: 80%
+        height: 100%
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        box-shadow: 0px 19px 59.52px 2.48px rgb(215 174 94 / 23%), 0px -19px 59.52px 2.48px rgb(215 174 94 / 23%)
+        z-index: -1
     &__item
         width: calc(100% / 5)
-        margin: 15px 0
         padding: 0 15px
         .gold
             font-weight: 500
     &-card
-        padding-top: 105px
+        padding-top: 145px
+        padding-bottom: 45px
+        border-radius: 10px
         color: $white
         font-size: 14px
         text-align: center
@@ -85,15 +104,346 @@ h1
             background-image: url(../pics/icons/b2i_4.png)
         &:nth-child(5)
             background-image: url(../pics/icons/b2i_5.png)
-        background-position: center top
+        background-position: center 45px
         background-repeat: no-repeat
         background-size: auto
+        background-color: $black
         &::before
             content: url(../pics/s1/vertical-line.png)
             position: absolute
             right: -20px
             top: 50%
             transform: translateY(-50%)
+            z-index: 1
         &:last-child::before
             content: none
+/* section 2 */
+.count
+    &-box
+        margin-left: -15px
+        margin-right: -15px
+    &-card
+        background: $black
+        color: $white
+        border-radius: 10px
+        font-size: 14px
+        font-weight: 100
+        text-align: center
+        position: relative
+        &::after
+            bottom: 30px
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+        &:nth-child(1)
+            padding-bottom: 100px
+            &::after
+                content: url(../pics/icons/logo-pale-text.png)
+        &:nth-child(3)
+            padding-bottom: 140px
+            &::after                
+                content: url(../pics/icons/logo-pale.png)
+        &__body
+            padding: 0 20px 20px
+        &:nth-child(1) &__img
+            background-image: url(../pics/s2/counton1.png)
+        &:nth-child(2) &__img
+            background-image: url(../pics/s2/counton2.png)
+        &:nth-child(3) &__img
+            background-image: url(../pics/s2/counton3.png)
+        &__img
+            width: calc( 100% - 2*20px )
+            height: 240px
+            border-radius: 5px
+            background-color: #aaa
+            background-size: cover
+            background-repeat: no-repeat
+            background-position: center
+            margin: -30px auto 0
+            overflow: hidden
+        &__title
+            font-size: 16px
+            font-weight: 500
+            margin: 30px 0 0
+            position: relative
+            &::after
+                content: url(../pics/s2/horizontal-line.png)
+                display: block
+        p
+            margin-bottom: 15px
+            &:last-child
+                margin-bottom: 0
+    &__item
+        width: calc(100% / 3 - 30px)
+        margin-left: 15px
+        margin-right: 15px
+        margin-bottom: 35px
+
+/* section 3 */
+.problem
+    padding-bottom: 60px
+    &-circle
+        position: relative
+    &-men
+        display: block
+        max-width: 1140px
+        margin: -200px auto 0
+    &__item
+        color: $black
+        font-weight: 500
+        font-style: italic
+        font-size: 18px
+        text-align: center
+        position: absolute
+        transform: translateX(-50%)
+        &:nth-of-type(1),
+        &:nth-of-type(2)
+            top: 20%
+        &:nth-of-type(1)
+            left: 28%
+        &:nth-of-type(2)
+            left: 71%
+        &:nth-of-type(3),
+        &:nth-of-type(4)
+            top: 40%
+        &:nth-of-type(3)
+            left: 15%
+        &:nth-of-type(4)
+            left: 84%
+
+        &:nth-of-type(5),
+        &:nth-of-type(6)
+            top: 62%
+        &:nth-of-type(5)
+            left: 18%
+        &:nth-of-type(6)
+            left: 82%
+        &:nth-of-type(7)
+            top: 80%
+            left: 50%
+
             
+        span
+            font-size: 72px
+            font-weight: bold
+            font-style: italic
+            color: $gold
+        p
+            background: $white
+            margin-top: -30px
+            position: relative
+            z-index: 1
+
+/* section 4 */
+.test
+    background: url(../pics/s4/test-bg.jpg) center top/cover no-repeat
+    min-height: 460px
+    padding: 110px 0
+    h2
+        margin: 0
+        margin-bottom: 100px
+
+/* section 5 */
+.video
+    margin-left: -15px
+    margin-right: -15px
+.video__item
+    width: calc(49% - 30px)
+    margin: 15px
+    position: relative
+    .thumb
+        width: 100%
+        height: 280px
+        margin: 0
+        position: relative
+        border: 1px solid $gold
+        border-radius: 7%/50%
+        padding: 10px
+    .thumb-wr
+        position: relative
+        overflow: hidden
+        border-radius: 7%/50%
+        margin: 0
+    .overlay
+        background-color: rgba($black, 0.6)
+        position: absolute
+        top: 0
+    img,
+    .overlay,
+    .thumb-wr
+        width: 100%
+        height: 100%
+        object-fit: cover
+    a
+        font-size: 0
+        display: block
+        width: 70px
+        height: 50px
+        background: url(../pics/icons/play.png) center/cover no-repeat
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: 1
+    p
+        margin: 20px 0
+        padding-left: 35px
+        font-size: 14px
+        font-weight: 300 
+
+.separator
+    width: auto
+    display: block
+    margin: 30px auto
+
+/* section 6 */
+.em
+    padding-bottom: 100px
+    &-box
+        align-items: flex-end
+    &__title
+        margin-bottom: 40px
+        text-align: left
+    &__left
+        max-width: 500px
+        font-weight: 300
+        font-size: 18px
+        p
+            margin-bottom: 20px
+    &__right
+        width: 550px
+    .download
+        margin: 50px 0 0
+        line-height: 37px
+
+/* section 7 */
+.team
+    background: url(../pics/s7/team.jpg) top center/cover no-repeat
+    color: $white
+    text-align: center
+    padding: 10px 0 150px
+    .container
+        position: relative
+    &-wr
+        margin-left: -15px
+        margin-right: -15px
+        margin-bottom: 70px
+    &__item
+        width: calc(100%/4 - 30px)
+        margin: 15px
+        border-radius: 10px
+        background: $black
+    &__img
+        border-radius: 10px 10px 0 0
+        height: 150px
+        background: #aaa
+        overflow: hidden
+    &__body
+        padding: 25px 15px
+    h4
+        font-size: 16px
+        font-weight: 500
+        margin: 0
+        &::after
+            content: url(../pics/s7/horizontal-line.png)
+            display: block
+            margin: 15px auto 0
+    h5
+        font-size: 14px
+        font-weight: 300
+        margin: 10px 0 25px
+    &__advice
+        margin: -160px 0 100px
+.advice
+    width: 100%
+    background: $black
+    border-radius: 10px
+    padding: 10px
+    &-inner
+        border-radius: 10px
+        border: 1px solid $gold
+        padding: 45px 55px
+        text-align: center
+        font-size: 24px
+        font-weight: 300
+        color: $white
+    &__separator
+        width: 200px
+        display: block
+        margin: 35px auto
+.cert
+    position: relative
+    padding: 0 60px
+    margin: 100px 0 150px
+    &_swiper 
+        .swiper-slide 
+            width: calc(100%/4 - 30px)
+            margin: 0 15px
+        .swiper-wrapper
+            align-items: center
+    &__arrow 
+        color: $gold
+
+/* section 8 */
+.review
+    background: $pale
+    padding: 10px 0 100px
+    &-box
+        margin-left: -15px
+        margin-right: -15px
+        height: 335px
+        overflow: hidden
+    &__item
+        width: 33.3%
+        padding: 0 15px
+        margin: 0 0 30px
+        font-size: 18px
+        line-height: 24px
+
+/* section 11 */
+.case
+    padding: 10px 0 100px
+    background: $pale
+    
+/* section 12 */
+.service
+    background: url(../pics/s12/services-bg.jpg) top center / cover no-repeat
+    padding: 20px 0 165px
+    &__list
+        margin-left: -15px
+        margin-right: -15px
+        justify-content: center
+        align-items: flex-start
+    &__item
+        width: 260px
+        margin: 40px
+        background: $black
+        border-radius: 10px
+        color: $white
+        font-size: 16px
+        font-weight: normal
+        text-align: center
+        padding: 10px 10px 25px
+        &:nth-of-type(2)
+            margin-top: 110px
+        p:before
+            content: ""
+            width: 90%
+            height: 50px
+            background: url(../pics/s5/separator.png) center/100% no-repeat
+            display: block
+            margin: 0 auto
+            margin-top: -45px
+    .enough
+        font-size: 48px      
+    &__img
+        margin-top: -70px
+    &__form
+        max-width: 650px
+        margin: 0 auto
+        .inputs-box
+            margin: 45px 0
+        .form__title
+            font-size: 24px
+            span
+                text-transform: none

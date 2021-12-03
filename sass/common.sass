@@ -6,12 +6,21 @@ body
     font-family: 'HelveticaNeueCyr', Arial, sans-serif
     line-height: normal
     font-weight: 400
+html, body
+    margin: 0
+    padding: 0
 h1
     font-size: 48px
 h2
     font-size: 30px
+    margin: 85px 0
+    font-weight: 500
 h3
     font-size: 20px
+h1, h2
+    text-transform: uppercase
+    text-align: center
+    font-weight: bold
 a
     text-decoration: none
     color: $gold
@@ -79,11 +88,22 @@ button:not(:disabled),
     color: $white
     text-transform: uppercase
     text-align: center
+    text-decoration: none
     padding: 15px 5px
     cursor: pointer
     outline: none
     margin-left: auto
     margin-right: auto
+    position: relative
+    &::before
+        content: ""
+        box-shadow: 0px 8px 31.16px 6.84px rgba(215, 174, 94, 0.44)
+        background-image: linear-gradient( -90deg, rgb(215,174,94) 0%, rgb(171,131,54) 100%)
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 0
+
+
 .btn_empty:not(:disabled)
     background: none
     box-shadow: none
@@ -108,5 +128,59 @@ button:not(:disabled),
     color: $gold
 .flex
     display: flex
-.flex-wrap
-    flex-wrap: wrap
+    justify-content: space-between
+    flex-wrap: wrap 
+
+.iframe-wr
+    overflow: hidden
+    padding-top: 56.25%
+    position: relative
+    margin-bottom: 15px
+    iframe
+        border: 0
+        position: absolute
+        height: 100%
+        width: 100%
+        left: 0
+        top: 0
+.show__more
+    background: $pale
+    padding: 80px 0 0
+    box-shadow: 0 -20px 20px 1px $pale
+    position: relative
+
+table
+    border: none
+    color: $black
+    font-size: 22px
+    text-align: center
+    border-collapse: collapse
+    a
+        line-height: 36px
+th
+    color: $gold
+    font-size: 14px
+    font-weight: 400
+    text-transform: uppercase
+    padding: 15px 5px 15px 25px
+
+td
+    padding: 15px 25px
+    text-align: left
+    &:nth-child(2),
+    &:nth-child(4)
+        font-weight: bold
+        
+tbody tr
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%)
+    border-radius: 5px
+    &:nth-child(even)
+        background-color: $tr
+
+tbody td
+    &:first-child
+        border-radius: 5px 0 0 5px
+    &:first-child
+        border-radius:  0 5px 5px 0
+
+        
