@@ -12,6 +12,65 @@
         flex-wrap: wrap 
 .nav
     position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background: rgba(0,0 ,0 ,0.302 )
+    z-index: 10
+.menu
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0
+    .children
+        // display: none
+        opacity: 0
+        visibility: hidden
+        position: absolute
+        top: 100%
+        left: 15px
+        background: $black
+        font-size: 18px
+        width: 220px
+        .menu-item
+            font-size: 13px
+            text-transform: none
+            a
+                padding: 12px 15px
+    &-item
+        color: $white
+        font-size: 12px
+        text-transform: uppercase
+        &:hover
+            .children
+                display: block
+                opacity: 1
+                visibility: visible
+        a
+            color: inherit
+            padding: 20px 30px
+            display: block
+            position: relative
+            &:hover
+                color: $gold
+        &_has_children
+            position: relative
+            &::before
+                content: url(../pics/icons/dropdown-arrow.png)
+                position: absolute
+                bottom: 6px
+                left: calc(50% - 6px)
+            &:hover
+                &::before
+                    transform: rotate(180deg)
+.current-menu-item
+    color: $gold
+
+
+    
+
+
+
 .logo-wr
     display: block
     font-size: 0
@@ -381,8 +440,6 @@ h1
             margin: 0 15px
         .swiper-wrapper
             align-items: center
-    &__arrow 
-        color: $gold
 
 /* section 8 */
 .review
@@ -393,18 +450,329 @@ h1
         margin-right: -15px
         height: 335px
         overflow: hidden
+        margin-bottom: 0
+        justify-content: flex-start
+
     &__item
         width: 33.3%
         padding: 0 15px
         margin: 0 0 30px
         font-size: 18px
         line-height: 24px
+/* section 9 */
+.get
+    padding: 10px 0 70px
+    .container
+        position: relative
+        &::before
+            content: url(../pics/s9/offer.png)
+            position: absolute
+            bottom: -43%
+            left: -32%
+    &__btn
+        margin-top: 75px
+.tabs_block 
+    width: 660px
+    height: 610px
+    margin: 0 auto
+    position: relative
+
+.tab 
+    display: block
+    width: 93px
+    height: 93px
+    border: 1px solid $gold
+    border-radius: 93px
+    -webkit-border-radius: 93px
+    -moz-border-radius: 93px
+    -ms-border-radius: 93px
+    text-align: center
+    cursor: pointer
+    position: absolute
+    transition: 0.3s
+    img 
+        width: 45px
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate3d(-50%, -50%, 0)
+        &:nth-child(2) 
+            display: none
+    &:before 
+        display: block
+        font-size: 60px
+        line-height: 64px
+        color: #F7F7F7
+        font-weight: 600
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+
+    &:after 
+        display: block
+        content: ''
+        width: 260px
+        height: 1px
+        background: #D5D5D5
+        position: absolute
+
+    &_active 
+        background: $gold
+        color: $white
+        box-shadow: 0 0 24px rgba($gold, 0.58)
+        &:before 
+            color: $gold
+        img 
+            display: none
+        img:nth-child(2) 
+            display: block
+    &__item 
+        display: none
+        vertical-align: middle
+        transition: 0.3s
+        opacity: 0
+        visibility: hidden
+        &.tab__item_active
+            display: table-cell
+            opacity: 1
+            visibility: visible
+
+.tab_1 
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    &:before 
+        content: '1.'
+        left: -65px
+    &:after 
+        top: 170px
+        right: -230px
+        transform: rotate(45deg)
+
+.tab_2 
+    top: 50%
+    right: 0
+    transform: translateY(-50%)
+    &:before 
+        content: '2.'
+        right: -65px
+
+    &:after 
+        top: 180px
+        right: 60px
+        transform: rotate(-45deg)
+
+.tab_3 
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    &:before 
+        content: '3.'
+        left: -65px
+
+    &:after 
+        top: -80px
+        right: 60px
+        transform: rotate(45deg)
+
+.tab_4 
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    &:before 
+        content: '4.'
+        left: -65px
+    &:after 
+        top: -90px
+        right: -220px
+        transform: rotate(-45deg)
+
+.tab__content 
+    display: table
+    height: 160px
+    width: 360px
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate3d(-50%, -50%, 0)
+
+/* turnkey */
+.turnkey
+    padding: 50px 0
+    position: relative
+    &__title
+        font-size: 30px
+        font-weight: bold
+        margin: 20px 0
+        text-align: center
+    &__decr
+        max-width: 530px
+        margin: 20px auto
+        text-align: center
+        font-size: 18px
+        .gold
+            font-weight: bold
+        p:not(:last-child)
+            margin-bottom: 20px
+    &__list
+        margin: 50px -15px
+    &__item 
+        font-size: 16px
+        margin-bottom: 15px
+        .gold
+            font-weight: bold
+            font-style: italic
+    &__col
+            padding: 0 15px
+            width: 50%
+    &__advice
+
+/* section 10 */
+.deal
+    padding: 10px 0 100px
+    &-box
+        position: relative
+        padding: 0 50px
+    &__btn
+        margin-top: 50px
+    &__items
+        padding-left: 25px
+        display: flex
+
+    &__item
+        max-width: 337px
+        width: 100%
+        &:nth-child(2)
+            margin-right: 30px
+            margin-left: 60px
+
+        &:nth-child(3)
+            max-width: 359px
+            width: 100%
+            text-align: center
+        img
+            border: 7px solid $gold
+
+    &__block
+        border: 4px solid #E6E6E6
+        position: relative
+        padding: 13px 5px 0
+        transition: all 0.3s
+        margin-bottom: 40px
+
+        &:hover
+            border: 4px solid rgba($gold, 0.7)
+
+
+    &__head
+        display: block
+        font-size: 20px
+        line-height: 24px
+        text-align: center
+        margin-bottom: -13px
+        position: relative
+
+        & > span
+            font-size: 20px
+            color: $gold
+
+    &__result
+        text-align: left
+        padding-left: 60px
+
+        &:before
+            display: block
+            content: ''
+            width: 33px
+            height: 33px
+            background: url(../pics/s10/result.png) 0 0 no-repeat
+            position: absolute
+            left: 12px
+            top: -3px
+
+    &__case
+        text-align: left
+        padding-left: 60px
+
+        &:before
+            display: block
+            content: ''
+            width: 28px
+            height: 28px
+            background: url(../pics/s10/case.png) 0 0 no-repeat
+            position: absolute
+            left: 15px
+            top: -1px
+
+    &__curt
+        text-align: left
+        font-size: 20px
+        line-height: 32px
+        padding-left: 64px
+        margin-bottom: 18px
+
+        &:before
+            display: block
+            content: ''
+            width: 36px
+            height: 32px
+            background: url(../pics/s10/curt.png) 0 0 no-repeat
+            position: absolute
+            left: 15px
+            top: 0px
+
+    &__content
+        width: calc(100% + 20px)
+        background: $white
+        border: 1px solid #E6E6E6
+        padding: 15px 12px
+        position: relative
+        transform: translate3d(-30px, 25px, 0)
+        font-size: 16px
+
+        & > span
+            display: block
+            color: $black
+            line-height: 20px
+
+    &__ques
+        padding-top: 70px
+
+        &:before
+            display: block
+            content: ''
+            width: 31px
+            height: 24px
+            // background: url(../pics/s10/deal__q.png) 0 0 no-repeat
+            top: 34px
+            left: 12px
+            position: absolute
 
 /* section 11 */
 .case
     padding: 10px 0 100px
     background: $pale
-    
+    overflow: hidden
+.table-wr
+    height: 440px
+    overflow: hidden
+    margin-bottom: 0
+.table-box
+    position: relative
+    &::before
+        content: ""
+        width: 320px
+        height: 320px
+        position: absolute
+        right: -95px
+        top: -90px
+        background: url(../pics/s11/stamp.svg) center/cover no-repeat
+        animation: spin 25s infinite linear
+table 
+    td
+        white-space: nowrap
+        &:nth-child(5) 
+            white-space: initial
 /* section 12 */
 .service
     background: url(../pics/s12/services-bg.jpg) top center / cover no-repeat
@@ -424,6 +792,8 @@ h1
         font-weight: normal
         text-align: center
         padding: 10px 10px 25px
+        position: relative
+        z-index: 0
         &:nth-of-type(2)
             margin-top: 110px
         p:before
@@ -434,6 +804,23 @@ h1
             display: block
             margin: 0 auto
             margin-top: -45px
+        &::after
+            content: url(../pics/shadow.png)
+            left: 50%
+            position: absolute
+            z-index: -3
+            bottom: -45px
+            transform: translateX(-50%)
+        &::before
+            content: ""
+            left: 0
+            top: 0
+            position: absolute
+            width: 100%
+            height: 100%
+            z-index: -1
+            background: $black
+            border-radius: 10px
     .enough
         font-size: 48px      
     &__img

@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   transition: 0.3s;
 }
@@ -7,6 +7,7 @@ body {
   font-family: "HelveticaNeueCyr", Arial, sans-serif;
   line-height: normal;
   font-weight: 400;
+  color: #0e0e0e;
 }
 
 html, body {
@@ -90,6 +91,8 @@ input {
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.349);
   padding: 30px 45px;
+  position: relative;
+  z-index: 0;
 }
 .form__title {
   font-size: 20px;
@@ -147,12 +150,12 @@ button:not(:disabled),
 [type=submit]:not(:disabled)::before,
 button:not(:disabled)::before,
 .btn:not(:disabled)::before {
-  content: "";
-  box-shadow: 0px 8px 31.16px 6.84px rgba(215, 174, 94, 0.44);
-  background-image: linear-gradient(-90deg, #d7ae5e 0%, #ab8336 100%);
+  content: url(../pics/shadow.png);
   left: 50%;
+  position: absolute;
+  z-index: -1;
+  bottom: -45px;
   transform: translateX(-50%);
-  bottom: 0;
 }
 
 .btn_empty:not(:disabled) {
@@ -164,6 +167,9 @@ button:not(:disabled)::before,
   padding: 0 5px;
   color: #d7ae5e;
   text-transform: initial;
+}
+.btn_empty:not(:disabled)::before {
+  content: none;
 }
 
 .container {
@@ -211,14 +217,17 @@ button:not(:disabled)::before,
   padding: 80px 0 0;
   box-shadow: 0 -20px 20px 1px #f5f5f5;
   position: relative;
+  z-index: 2;
 }
 
 table {
   border: none;
   color: #0e0e0e;
-  font-size: 22px;
-  text-align: center;
+  font-size: 20px;
   border-collapse: collapse;
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
 table a {
   line-height: 36px;
@@ -230,11 +239,11 @@ th {
   font-weight: 400;
   text-transform: uppercase;
   padding: 15px 5px 15px 25px;
+  text-align: left;
 }
 
 td {
   padding: 15px 25px;
-  text-align: left;
 }
 td:nth-child(2), td:nth-child(4) {
   font-weight: bold;
@@ -247,10 +256,39 @@ tbody tr {
 tbody tr:nth-child(even) {
   background-color: #ebebeb;
 }
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
 
 tbody td:first-child {
   border-radius: 5px 0 0 5px;
 }
 tbody td:first-child {
   border-radius: 0 5px 5px 0;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.animated-height {
+  margin-bottom: 30px !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #d7ae5e;
 }/*# sourceMappingURL=common.css.map */
