@@ -56,7 +56,7 @@
   opacity: 1;
   visibility: visible;
 }
-.menu-item_clicked::before {
+.menu-item_clicked span::before {
   transform: rotate(180deg);
 }
 .menu-item a, .menu-item span {
@@ -72,7 +72,7 @@
 .menu-item_has_children {
   position: relative;
 }
-.menu-item_has_children::before {
+.menu-item_has_children span::before {
   content: url(../pics/icons/dropdown-arrow.png);
   position: absolute;
   bottom: 6px;
@@ -81,6 +81,22 @@
 
 .current-menu-item {
   color: #d7ae5e;
+}
+
+.menu-burger:not(:disabled) {
+  width: 45px;
+  box-shadow: none;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  height: auto;
+  transform: rotateY(180deg);
+  margin-top: -8px;
+}
+.menu-burger:not(:disabled)::before {
+  content: none;
 }
 
 .logo-wr {
@@ -984,6 +1000,7 @@ table td:nth-child(5) {
 }
 .service__img {
   margin-top: -70px;
+  width: 240px;
 }
 .service__form {
   max-width: 650px;

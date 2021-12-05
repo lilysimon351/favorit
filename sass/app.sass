@@ -48,7 +48,7 @@
                 display: block
                 opacity: 1
                 visibility: visible
-            &::before
+            span::before
                 transform: rotate(180deg)
         a, span
             color: inherit
@@ -60,18 +60,26 @@
                 color: $gold
         &_has_children
             position: relative
-            &::before
+            span::before
                 content: url(../pics/icons/dropdown-arrow.png)
                 position: absolute
                 bottom: 6px
                 left: calc(50% - 6px)
 .current-menu-item
     color: $gold
-
-
-    
-
-
+.menu-burger:not(:disabled)
+    width: 45px
+    box-shadow: none
+    border: none
+    background: none
+    margin: 0
+    padding: 0
+    display: none
+    height: auto
+    transform: rotateY( 180deg)
+    margin-top: -8px
+    &::before
+        content: none
 
 .logo-wr
     display: block
@@ -823,6 +831,7 @@ table
         font-size: 48px      
     &__img
         margin-top: -70px
+        width: 240px
     &__form
         max-width: 650px
         margin: 0 auto
