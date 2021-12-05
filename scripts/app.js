@@ -64,11 +64,32 @@ function expand(button, elem, height, changedText, defaultText) {
 }
 
 // tabs
-document.querySelectorAll('.tab').forEach( (item, i) => { 
+document.querySelectorAll('.tab')?.forEach( (item, i) => { 
 	item.addEventListener('mouseenter', () => {
-		document.querySelector('.tab_active').classList.remove('tab_active');
+		document.querySelector('.tab_active')?.classList.remove('tab_active');
 		item.classList.add('tab_active');
 		document.querySelector('.tab__item_active').classList.remove('tab__item_active');
 		document.querySelectorAll('.tab__item')[i].classList.add('tab__item_active');
+	})
+});
+
+// menu
+document.querySelectorAll('.menu-item_has_children')?.forEach( (item, i) => { 
+	item.addEventListener('click', () => {
+		let className = 'menu-item_clicked'
+		if(document.querySelector(`.${className}`) === item) {
+			item.classList.remove(className)
+		} else {
+			document.querySelector(`.${className}`)?.classList.remove(className);
+			item.classList.add(className);
+		}
+
+		// document.querySelectorAll(`.${className}`)?.forEach(item2 => {
+		// 	if(item2 !== item) {
+		// 		item.classList.remove(className);
+		// 	}
+		// })
+		// item.classList.remove(className);
+		// item.classList.add(className);
 	})
 });

@@ -1,0 +1,258 @@
+/* // `xs` returns only a ruleset and no media query */
+/*  `xxl` applies to x-large devices (large desktops, less than 1400px) */
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .leaders {
+    width: 480px;
+    left: calc(100% - 25px);
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+  h1 .bigger {
+    font-size: 60px;
+  }
+
+  .em__right {
+    position: absolute;
+    right: -40px;
+  }
+
+  .count-card__img {
+    height: 220px;
+  }
+
+  .team-wr {
+    justify-content: center;
+  }
+  .team__item {
+    width: calc(100%/3 - 30px);
+    min-width: 270px;
+  }
+  .team__img {
+    height: 170px;
+  }
+  .team__img img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .cert_swiper .swiper-slide {
+    width: calc(100%/3 - 30px);
+  }
+
+  .advice br {
+    display: none;
+  }
+
+  .get .container::before {
+    transform: scale(0.8);
+  }
+
+  .deal__items {
+    justify-content: center;
+  }
+  .deal__item:nth-child(2) {
+    margin-right: 0;
+  }
+  .deal__item:nth-child(3) {
+    display: none;
+  }
+
+  table {
+    font-size: 16px;
+  }
+
+  td, th {
+    padding: 15px;
+  }
+
+  th {
+    padding-right: 5px;
+  }
+
+  .table-box::before {
+    width: 250px;
+    height: 250px;
+    top: -55px;
+  }
+
+  .service__item {
+    margin: 20px;
+  }
+}
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .flex {
+    justify-content: center;
+  }
+
+  .menu > .menu-item {
+    text-align: center;
+  }
+  .menu > .menu-item a, .menu > .menu-item span {
+    padding: 20px 10px;
+  }
+
+  .leaders {
+    display: none;
+  }
+
+  .intro__left {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1, .site-descr {
+    text-align: center;
+  }
+
+  .how {
+    justify-content: center;
+  }
+  .how__item {
+    width: calc(100% / 3);
+  }
+  .how__item:nth-child(3)::before {
+    display: none;
+  }
+  .how__item:nth-child(4), .how__item:nth-child(5) {
+    width: 50%;
+  }
+
+  .count__item {
+    width: calc(100% / 2 - 30px);
+  }
+
+  .problem {
+    padding-bottom: 60px;
+  }
+  .problem-circle {
+    width: 690px;
+    height: 690px;
+    margin-top: -175px;
+  }
+  .problem-men {
+    max-width: 565px;
+    padding: 75px 0 0;
+  }
+
+  .video__item {
+    width: 100%;
+    max-width: 485px;
+  }
+
+  .em {
+    display: none;
+  }
+  .em__left, .em__title {
+    text-align: center;
+  }
+  .em .download {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .review__item {
+    width: 50%;
+  }
+
+  .get .container::before {
+    display: none;
+  }
+
+  .tabs_block {
+    width: 570px;
+    height: 570px;
+  }
+
+  .tab__content {
+    width: 295px;
+    height: unset;
+    text-align: center;
+  }
+
+  .advice-inner {
+    font-size: 19px;
+  }
+
+  .deal__items {
+    flex-direction: column;
+    padding-left: 0;
+    align-items: center;
+  }
+  .deal__item {
+    max-width: 485px;
+  }
+  .deal__item:nth-child(2) {
+    margin-left: 0;
+  }
+  .deal__content {
+    width: 100%;
+    transform: translate3d(0, 25px, 0);
+  }
+
+  .table-wr {
+    height: 350px;
+  }
+
+  tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  th, td {
+    width: 20%;
+    text-align: center;
+  }
+
+  thead th:last-child {
+    display: none;
+  }
+
+  tbody td:last-child {
+    width: auto;
+  }
+
+  .table-box::before {
+    display: none;
+  }
+
+  th {
+    font-size: 11.5px;
+  }
+
+  .service {
+    padding-bottom: 130px;
+  }
+  .service__list {
+    align-items: stretch;
+    margin-top: 170px;
+  }
+  .service__item {
+    margin: 15px !important;
+  }
+  .service .enough {
+    font-size: 42px;
+    margin: 50px 0;
+  }
+}
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .container {
+    max-width: 540px;
+  }
+}
+/* `sm` applies to x-small devices (portrait phones, less than 576px) *//*# sourceMappingURL=media.css.map */

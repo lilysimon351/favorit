@@ -17,22 +17,20 @@ html, body {
 
 h1 {
   font-size: 48px;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 h2 {
   font-size: 30px;
   margin: 85px 0;
-  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
 }
 
 h3 {
   font-size: 20px;
-}
-
-h1, h2 {
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: bold;
 }
 
 a {
