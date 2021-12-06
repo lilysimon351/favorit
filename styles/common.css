@@ -124,7 +124,8 @@ input {
 button:not(:disabled),
 .btn:not(:disabled) {
   display: block;
-  background-image: linear-gradient(-90deg, #d7ae5e 0%, #ab8336 100%);
+  background: linear-gradient(-90deg, #d7ae5e, #d7ae5e, #ab8336);
+  background-size: 200%;
   box-shadow: inset 0px -3px 6px 2px rgba(202, 162, 84, 0.75);
   border: none;
   border-radius: 8px/35px;
@@ -149,12 +150,29 @@ button:not(:disabled),
 [type=submit]:not(:disabled)::before,
 button:not(:disabled)::before,
 .btn:not(:disabled)::before {
-  content: url(../pics/shadow.png);
+  content: "";
   left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 10px;
+  box-shadow: 0px 8px 31.16px 6.84px rgba(215, 174, 94, 0.44);
   position: absolute;
   z-index: -1;
-  bottom: -45px;
-  transform: translateX(-50%);
+  bottom: 0;
+}
+[type=button]:not(:disabled):hover,
+[type=reset]:not(:disabled):hover,
+[type=submit]:not(:disabled):hover,
+button:not(:disabled):hover,
+.btn:not(:disabled):hover {
+  background-position: 35%;
+}
+[type=button]:not(:disabled):hover::before,
+[type=reset]:not(:disabled):hover::before,
+[type=submit]:not(:disabled):hover::before,
+button:not(:disabled):hover::before,
+.btn:not(:disabled):hover::before {
+  bottom: 30px;
 }
 
 .btn_empty:not(:disabled) {
@@ -170,6 +188,9 @@ button:not(:disabled)::before,
 }
 .btn_empty:not(:disabled)::before {
   content: none;
+}
+.btn_empty:not(:disabled):hover {
+  opacity: 0.6;
 }
 
 .container {

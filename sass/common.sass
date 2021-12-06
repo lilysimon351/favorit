@@ -81,7 +81,8 @@ input
 button:not(:disabled),
 .btn:not(:disabled)
     display: block
-    background-image: $gradient
+    background: linear-gradient( -90deg, rgb(215,174,94),  rgb(215,174,94), rgb(171,131,54) )
+    background-size: 200%
     box-shadow: $btn-shadow
     border: none
     border-radius: 8px/35px
@@ -101,12 +102,19 @@ button:not(:disabled),
     margin-right: auto
     position: relative
     &::before
-        content: url(../pics/shadow.png)
+        content: ""
         left: 50%
+        transform: translateX(-50%)
+        width: 50%
+        height: 10px
+        box-shadow: 0px 8px 31.16px 6.84px rgba(215, 174, 94, 0.44)
         position: absolute
         z-index: -1
-        bottom: -45px
-        transform: translateX(-50%)
+        bottom: 0
+    &:hover
+        background-position: 35%
+        &::before
+            bottom: 30px
 
 .btn_empty:not(:disabled)
     background: none
@@ -120,6 +128,8 @@ button:not(:disabled),
     text-transform: initial
     &::before
         content: none
+    &:hover
+        opacity: 0.6
 
 .container
     max-width: 1170px

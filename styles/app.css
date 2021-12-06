@@ -18,7 +18,7 @@
   left: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 10;
+  z-index: 20;
 }
 
 .menu {
@@ -94,6 +94,7 @@
   height: auto;
   transform: rotateY(180deg);
   margin-top: -8px;
+  transition: none;
 }
 .menu-burger:not(:disabled)::before {
   content: none;
@@ -119,6 +120,9 @@
   font-size: 20px;
   color: #d7ae5e;
   font-weight: 400;
+}
+.phone:hover {
+  opacity: 0.7;
 }
 .phone::before {
   content: "";
@@ -446,6 +450,9 @@ h1 .bigger {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+}
+.video__item a:hover {
+  opacity: 0.8;
 }
 .video__item p {
   margin: 20px 0;
@@ -842,7 +849,7 @@ h1 .bigger {
   content: "";
   width: 33px;
   height: 33px;
-  background: url(../pics/s10/result.png) 0 0 no-repeat;
+  background: url(../pics/icons/result.png) 0 0/cover no-repeat;
   position: absolute;
   left: 12px;
   top: -3px;
@@ -856,7 +863,7 @@ h1 .bigger {
   content: "";
   width: 28px;
   height: 28px;
-  background: url(../pics/s10/case.png) 0 0 no-repeat;
+  background: url(../pics/icons/case.png) 0 0/cover no-repeat;
   position: absolute;
   left: 15px;
   top: -1px;
@@ -873,7 +880,7 @@ h1 .bigger {
   content: "";
   width: 36px;
   height: 32px;
-  background: url(../pics/s10/curt.png) 0 0 no-repeat;
+  background: url(../pics/icons/curt.png) 0 0/cover no-repeat;
   position: absolute;
   left: 15px;
   top: 0px;
