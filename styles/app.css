@@ -568,6 +568,9 @@ h1 .bigger {
   font-weight: 300;
   color: #ffffff;
 }
+.advice-inner p:not(:last-child) {
+  margin-bottom: 20px;
+}
 .advice__separator {
   width: 200px;
   display: block;

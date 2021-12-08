@@ -386,6 +386,9 @@
   .deal__arrow {
     top: 30px;
   }
+  .deal__btn {
+    margin-top: 10px;
+  }
 
   th, td {
     width: 25%;
@@ -519,6 +522,7 @@
   .advice-inner {
     padding: 20px 10px;
     font-size: 15px;
+    text-align: left;
   }
 
   .cert {
