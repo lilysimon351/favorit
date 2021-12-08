@@ -522,6 +522,12 @@ h1 .bigger {
   height: 150px;
   background: #aaa;
   overflow: hidden;
+  font-size: 0;
+}
+.team__img img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .team__body {
   padding: 25px 15px;
