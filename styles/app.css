@@ -611,6 +611,9 @@ h1 .bigger {
   font-size: 18px;
   line-height: 24px;
 }
+.review__item .iframe-wr {
+  margin-bottom: 15px;
+}
 
 /* profit */
 .get {
@@ -993,14 +996,6 @@ table td:nth-child(5) {
   display: block;
   margin: 0 auto;
   margin-top: -45px;
-}
-.service__item::after {
-  content: url(../pics/shadow.png);
-  left: 50%;
-  position: absolute;
-  z-index: -3;
-  bottom: -45px;
-  transform: translateX(-50%);
 }
 .service__item::before {
   content: "";

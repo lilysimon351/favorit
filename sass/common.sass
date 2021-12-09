@@ -101,6 +101,9 @@ button:not(:disabled),
     margin-left: auto
     margin-right: auto
     position: relative
+    display: flex
+    justify-content: center
+    align-items: center
     &::before
         content: ""
         left: 50%
@@ -152,7 +155,6 @@ button:not(:disabled),
     overflow: hidden
     padding-top: 56.25%
     position: relative
-    margin-bottom: 15px
     iframe
         border: 0
         position: absolute
@@ -217,3 +219,51 @@ tbody td
 .swiper-button-prev, 
 .swiper-button-next 
     color: $gold
+
+.modal
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background: rgba(25,25,25,0.89)
+    visibility: hidden
+    position: fixed
+    opacity: 0
+    z-index: -10
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    &_opened
+        visibility: visible
+        opacity: 1
+        z-index: 100
+    &__inner
+        position: relative
+        max-width: 650px
+        width: 100%
+        padding: 0 15px
+    &__iframe-wr
+        background: url(../pics/icons/loading.svg) center/ 64px no-repeat
+        &_bg-none
+            background: none
+    & &__close
+        position: absolute
+        right: 0
+        top: -45px
+        height: 45px
+        width: 45px
+        cursor: pointer
+        background: url(../pics/icons/close.png) center no-repeat
+        background-size: 16px
+        background-position: center
+        border: none
+        box-sizing: border-box
+        padding: 0
+        opacity: .6
+        box-shadow: none
+        &::before
+            content: none
+        &:hover
+            opacity: 1
+            background-position: center

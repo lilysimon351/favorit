@@ -1,14 +1,10 @@
 // certificate slider
 const swiper = new Swiper('.cert_swiper', {
-    // Optional parameters
     loop: true,
     slidesPerView: 'auto',
     spaceBetween: 0,
-  
-    // If we need pagination
     pagination: false,
-  
-    // Navigation arrows
+
     navigation: {
       nextEl: '.cert__next',
       prevEl: '.cert__prev',
@@ -18,15 +14,11 @@ const swiper = new Swiper('.cert_swiper', {
 
 // deals slider
 const dealSwiper = new Swiper('.deal_swiper', {
-    // Optional parameters
     loop: true,
     slidesPerView: 1,
     spaceBetween: 0,
-  
-    // If we need pagination
     pagination: false,
-  
-    // Navigation arrows
+
     navigation: {
       nextEl: '.deal__next',
       prevEl: '.deal__prev',
@@ -43,7 +35,6 @@ const showReviwes = document.querySelector('.show-reviews'),
 	casesHeight = casesBox.offsetHeight	;
 	
 showReviwes.addEventListener('click', (event) => {
-	console.log(event)
 	expand(event.target, reviewsBox, reviewsHeight, 'Скрыть отзывы', 'Все отзывы')
 });
 showCases.addEventListener('click', (event) => {
@@ -56,7 +47,6 @@ function expand(button, elem, height, changedText, defaultText) {
 		elem.style.height   = elem.scrollHeight + 'px'
 		button.innerText = changedText
 	} else {
-		console.log(height, "after")
 		elem.classList.remove(className)
 		elem.style.height   = height + 'px'
 		button.innerText = defaultText
@@ -87,17 +77,17 @@ document.querySelectorAll('.menu-item_has_children')?.forEach( (item, i) => {
 });
 
 // burger menu
-document.querySelector('.menu-burger')?.addEventListener('click', (event) => {
+document.querySelector('.menu-burger')?.addEventListener('click', () => {
 	closeOpenMenu()
 })
 
 document.querySelector(".nav_expanded")?.addEventListener("click",  (event) => {
-	console.log("sdfklah")
 	if(event.target === this && event.target !== document.querySelector('.menu')) {
 		// closeOpenMenu();
 	}
 });
 
+// close/open menu
 function closeOpenMenu() {
 	let className = 'nav_expanded',
 		nav = document.querySelector('.nav');
@@ -107,3 +97,32 @@ function closeOpenMenu() {
 		nav.classList.add(className)
 	}
 }
+
+// modal
+
+let modal = document.querySelector('.modal'),
+	iframe = modal.querySelector('.modal__iframe'),
+	className = 'modal_opened';	
+
+// open modal
+document.querySelectorAll('.play')?.forEach( (item, i) => { 
+	item.addEventListener('click', (event) => {
+		event.preventDefault();
+		let ytLink = item.getAttribute('data-yt-link');
+		iframe.setAttribute('src', ytLink);
+		modal.classList.add(className);
+	})
+});
+
+// close modal
+modal?.addEventListener('click', (event) => {
+	event.preventDefault();
+	event.stopPropagation();
+	modal.classList.remove(className);
+	setTimeout(() =>  iframe.setAttribute('src', ""), 370 )
+})
+
+// stop propagation on iframe click
+iframe?.addEventListener('click', (event) => {
+	event.stopPropagation();
+})

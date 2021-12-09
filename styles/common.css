@@ -144,6 +144,9 @@ button:not(:disabled),
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 [type=button]:not(:disabled)::before,
 [type=reset]:not(:disabled)::before,
@@ -222,7 +225,6 @@ button:not(:disabled):hover::before,
   overflow: hidden;
   padding-top: 56.25%;
   position: relative;
-  margin-bottom: 15px;
 }
 .iframe-wr iframe {
   border: 0;
@@ -312,4 +314,60 @@ tbody td:first-child {
 .swiper-button-prev,
 .swiper-button-next {
   color: #d7ae5e;
+}
+
+.modal {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(25, 25, 25, 0.89);
+  visibility: hidden;
+  position: fixed;
+  opacity: 0;
+  z-index: -10;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal_opened {
+  visibility: visible;
+  opacity: 1;
+  z-index: 100;
+}
+.modal__inner {
+  position: relative;
+  max-width: 650px;
+  width: 100%;
+  padding: 0 15px;
+}
+.modal__iframe-wr {
+  background: url(../pics/icons/loading.svg) center/64px no-repeat;
+}
+.modal__iframe-wr_bg-none {
+  background: none;
+}
+.modal .modal__close {
+  position: absolute;
+  right: 0;
+  top: -45px;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+  background: url(../pics/icons/close.png) center no-repeat;
+  background-size: 16px;
+  background-position: center;
+  border: none;
+  box-sizing: border-box;
+  padding: 0;
+  opacity: 0.6;
+  box-shadow: none;
+}
+.modal .modal__close::before {
+  content: none;
+}
+.modal .modal__close:hover {
+  opacity: 1;
+  background-position: center;
 }/*# sourceMappingURL=common.css.map */
