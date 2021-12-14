@@ -333,6 +333,7 @@ h1 .bigger {
   display: block;
   max-width: 1140px;
   margin: 0 auto;
+  pointer-events: none;
 }
 .problem__item {
   color: #0e0e0e;
