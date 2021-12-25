@@ -321,6 +321,10 @@ h1 .bigger {
 .problem {
   padding-bottom: 60px;
 }
+.problem h2 {
+  position: relative;
+  z-index: 1;
+}
 .problem-circle {
   position: relative;
   margin: -200px auto 0;
@@ -390,7 +394,7 @@ h1 .bigger {
 
 /* test */
 .test {
-  background: url(../pics/s4/test-bg.jpg) center top/cover no-repeat;
+  background: #0e0e0e url(../pics/s4/test-bg.jpg) center top/cover no-repeat;
   min-height: 460px;
   padding: 110px 0;
   position: relative;
@@ -499,7 +503,7 @@ h1 .bigger {
 
 /* team */
 .team {
-  background: url(../pics/s7/team.jpg) top center/cover no-repeat;
+  background: #0e0e0e url(../pics/s7/team.jpg) top center/cover no-repeat;
   color: #ffffff;
   text-align: center;
   padding: 10px 0 150px;
@@ -964,7 +968,7 @@ table td:nth-child(5) {
 
 /* services */
 .service {
-  background: url(../pics/s12/services-bg.jpg) top center/cover no-repeat;
+  background: #0e0e0e url(../pics/s12/services-bg.jpg) top center/cover no-repeat;
   padding: 20px 0 165px;
 }
 .service__list {
